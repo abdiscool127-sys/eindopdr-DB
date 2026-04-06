@@ -4,7 +4,7 @@
 Dit is een simpele webapp voor Royal Food Corner Weert, gemaakt met PHP + MySQL om klanten te beheren.
 Je kan klanten toevoegen, aanpassen, verwijderen en gewoon snel zoeken op naam.
 
-## Wat kan de app?
+## Wat kan de website?
 - Overzicht van klanten met aantal resultaten
 - Zoeken op naam
 - Nieuwe klant toevoegen
@@ -71,6 +71,5 @@ Dat werkt, maar beter is om alles later om te zetten naar prepared statements.
 
 ## Later nog doen
 - Alles naar prepared statements
-- Betere validatie op invoer
 - Paginering bij veel klanten
 - Taal in de hele app gelijk trekken (nu NL + EN door elkaar)
