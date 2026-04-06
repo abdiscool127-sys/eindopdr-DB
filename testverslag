@@ -1,0 +1,97 @@
+Testverslag Klantenbeheer - Royal Food Corner Weert
+
+1. Inleiding
+Voor deze opdracht heb ik de klantenbeheer-app getest. Ik heb gekeken of alle belangrijke onderdelen werken: klanten toevoegen, aanpassen, verwijderen, zoeken en tonen in het overzicht. In dit verslag leg ik uit wat ik heb getest, wat eruit kwam en wat mijn conclusie is.
+
+2. Testomgeving
+- Laptop/pc met Windows
+- XAMPP (Apache + MySQL)
+- PHP
+- Database: klanten_db
+- Getest in een normale browser (Chrome/Edge)
+
+3. Wat ik heb getest
+- Verbinding met de database
+- Overzichtspagina met klantenlijst
+- Zoekfunctie op naam
+- Nieuwe klant toevoegen
+- Bestaande klant bewerken
+- Klant verwijderen
+- Navigatieknoppen
+- Maskeren van adres en woonplaats
+- Foutmeldingen en validatie
+
+4. Testen met resultaten
+
+Test 1 - Startpagina openen
+- Actie: index.php geopend.
+- Verwachting: pagina laadt en laat klanten zien.
+- Uitkomst: werkt.
+
+Test 2 - Nieuwe klant toevoegen
+- Actie: naam, adres en woonplaats ingevuld en op Opslaan geklikt.
+- Verwachting: klant komt in de database en je gaat terug naar overzicht.
+- Uitkomst: werkt.
+
+Test 3 - Toevoegen met lege velden
+- Actie: formulier verzonden met lege invoer.
+- Verwachting: klant mag niet opgeslagen worden en er komt een melding.
+- Uitkomst: werkt, melding "Vul alle velden in." verschijnt.
+
+Test 4 - Klant bewerken
+- Actie: bij een klant op bewerken geklikt, gegevens aangepast en opgeslagen.
+- Verwachting: wijzigingen worden opgeslagen.
+- Uitkomst: werkt.
+
+Test 5 - Bewerken met lege velden
+- Actie: een veld leeg gemaakt en op Bijwerken geklikt.
+- Verwachting: geen opslag, wel foutmelding.
+- Uitkomst: werkt, melding "Vul alle velden in." verschijnt.
+
+Test 6 - Klant verwijderen
+- Actie: op verwijderen geklikt en bevestigd.
+- Verwachting: klant verdwijnt uit overzicht.
+- Uitkomst: werkt.
+
+Test 7 - Zoeken op naam
+- Actie: zoekterm ingevuld in de zoekbalk.
+- Verwachting: alleen passende klanten worden getoond.
+- Uitkomst: werkt.
+
+Test 8 - Zoeken met leeg veld
+- Actie: zoekveld leeg gelaten.
+- Verwachting: standaardlijst wordt geladen (max 100, op naam gesorteerd).
+- Uitkomst: werkt.
+
+Test 9 - Privacy/maskering
+- Actie: in het overzicht gekeken naar adres en woonplaats.
+- Verwachting: gegevens deels afgeschermd met sterretjes.
+- Uitkomst: werkt (eerste tekens zichtbaar, rest sterretjes).
+
+Test 10 - Veilige weergave van tekst
+- Actie: speciale tekens in invoer getest.
+- Verwachting: tekst wordt veilig getoond en geen rare script-uitvoering.
+- Uitkomst: werkt.
+
+Test 11 - Navigatie
+- Actie: knoppen Overzicht, Nieuwe klant en Terug gebruikt.
+- Verwachting: links gaan naar de juiste pagina.
+- Uitkomst: werkt.
+
+Test 12 - Databasefout
+- Actie: fout in database-instellingen gesimuleerd.
+- Verwachting: duidelijke foutmelding.
+- Uitkomst: werkt, melding in het Nederlands.
+
+5. Eindresultaat
+- Aantal tests: 12
+- Geslaagd: 12
+- Niet geslaagd: 0
+
+6. Conclusie
+De opdracht werkt goed. Alle hoofdonderdelen doen wat ze moeten doen en de app is logisch in gebruik. Ook de validatie en privacy-masking werken zoals verwacht. Daarom vind ik dat deze opdracht technisch in orde is en voldoet aan de eisen.
+
+7. Verbeterpunten
+- SQL nog veiliger maken met prepared statements.
+- Nog strengere invoercontrole toevoegen.
+- Later eventueel automatische tests toevoegen.
