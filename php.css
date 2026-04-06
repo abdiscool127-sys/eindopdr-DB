@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+:root {
+    --brand-green: #1d5a45;
+    --brand-green-dark: #154636;
+    --brand-gold: #d8ad4a;
+    --bg-cream: #f7f3ea;
+    --ink: #1e2327;
+    --muted: #66717a;
+    --panel: #ffffff;
+    --line: #e7ddd0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(circle at 10% 0%, #fff7dd 0, transparent 42%),
+        radial-gradient(circle at 90% 20%, #efe8d6 0, transparent 35%),
+        var(--bg-cream);
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+    font-family: 'Fraunces', serif;
+    letter-spacing: 0.2px;
+}
+
+.container {
+    background: transparent;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background: linear-gradient(90deg, var(--brand-green-dark), var(--brand-green)) !important;
+    border-bottom: 3px solid var(--brand-gold);
+    box-shadow: 0 8px 24px rgba(21, 70, 54, 0.2);
+}
+
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-size: 1.25rem;
+}
+
+.navbar .btn {
+    border: 0;
+    border-radius: 999px;
+    font-weight: 600;
+    padding: 0.4rem 0.85rem;
+}
+
+.navbar .btn-light {
+    background: #fff4d2 !important;
+    color: #604212 !important;
+}
+
+.navbar .btn-light:hover {
+    background: #f3dea3 !important;
+}
+
+.navbar .btn-success {
+    background: #ffe08a !important;
+    color: #4f390f !important;
+}
+
+.navbar .btn-success:hover {
+    background: #f6cf62 !important;
+}
+
+.hero-banner {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.hero-banner .container {
+    background: linear-gradient(145deg, var(--brand-green-dark), #2c7358);
+    color: #fff;
+    border-radius: 22px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 22px 42px rgba(21, 70, 54, 0.22);
+}
+
+.hero-banner h2 {
+    font-size: clamp(1.5rem, 2.3vw, 2.2rem);
+    margin-bottom: 0.6rem;
+}
+
+.hero-banner .lead {
+    color: #d3eadf;
+    margin-bottom: 0;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 16px 34px rgba(35, 36, 34, 0.08);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.content-panel h1,
+.card-body h2 {
+    color: #20352d;
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}
+
+.form-control {
+    border: 1px solid #d9cdb8;
+    border-radius: 10px;
+    padding: 0.65rem 0.8rem;
+}
+
+.form-control:focus {
+    border-color: var(--brand-green);
+    box-shadow: 0 0 0 0.2rem rgba(29, 90, 69, 0.15);
+}
+
+.search-group .input-group-text {
+    background: #f6efdc;
+    color: #695127;
+    border: 1px solid #d9cdb8;
+    border-right: 0;
+}
+
+.search-group .form-control {
+    border-left: 0;
+}
+
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--brand-green);
+    border-color: var(--brand-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-green-dark);
+    border-color: var(--brand-green-dark);
+}
+
+.table {
+    color: var(--ink);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.table-header {
+    border-top: 1px solid #f0e6d6;
+    padding-top: 0.9rem;
+}
+
+.table th {
+    background: #f5e7bf;
+    color: #503a0f;
+    border-bottom: 1px solid #ead8ab;
+}
+
+.table td {
+    border-color: #f0e6d6;
+    vertical-align: middle;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: #fffaf0;
+}
+
+a {
+    color: var(--brand-green);
+}
+
+a:hover {
+    color: var(--brand-green-dark);
+}
+
+.footer {
+    margin-top: 2rem;
+    border-top: 3px solid var(--brand-gold);
+    background: linear-gradient(90deg, var(--brand-green-dark), var(--brand-green));
+    padding: 1.4rem 0;
+    color: #e7f3ed;
+    font-size: 0.92rem;
+}
+
+.footer-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.footer-extra {
+    color: #cfe7dc;
+}
+
+@media (max-width: 768px) {
+    .navbar .container {
+        gap: 0.75rem;
+    }
+
+    .navbar .btn {
+        margin-top: 0.35rem;
+    }
+
+    .hero-banner .container {
+        padding: 1.6rem 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
